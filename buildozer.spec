@@ -11,7 +11,8 @@ source.include_patterns = app/data/*.json
 version = 1.0.0
 
 # Kivy + plyer (вибрация, выбор фото), android — для Intent «Поделиться»
-requirements = python3,kivy==2.3.0,plyer,android
+requirements = python3==3.11.5,hostpython3==3.11.5,kivy==2.3.0,plyer,android
+p4a.branch = v2024.01.21
 
 orientation = portrait
 fullscreen = 0
