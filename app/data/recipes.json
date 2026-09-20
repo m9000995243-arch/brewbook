@@ -1,0 +1,469 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "id": "coffee_espresso",
+      "kind": "coffee",
+      "category": "base",
+      "icon": "☕",
+      "name": {"ru": "Эспрессо", "en": "Espresso"},
+      "subtitle": {"ru": "Основа всех напитков", "en": "The base of everything"},
+      "desc": {"ru": "Плотный концентрированный кофе объёмом 30–40 мл с густой ореховой пенкой-крема.", "en": "Dense concentrated shot, 30-40 ml, with a thick hazelnut crema."},
+      "base_servings": 1,
+      "servings_options": [1, 2],
+      "params": [
+        {"key": "coffee", "label": {"ru": "Кофе", "en": "Coffee"}, "value": 18, "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Выход напитка", "en": "Yield"}, "value": 36, "unit": "ml", "scale": true},
+        {"key": "temp", "label": {"ru": "Температура воды", "en": "Water temp"}, "text": {"ru": "92–94 °C", "en": "92-94 °C"}},
+        {"key": "grind", "label": {"ru": "Помол", "en": "Grind"}, "text": {"ru": "Мелкий, как мелкая соль", "en": "Fine, like table salt"}},
+        {"key": "time", "label": {"ru": "Время пролива", "en": "Extraction"}, "text": {"ru": "25–30 с", "en": "25-30 s"}},
+        {"key": "pressure", "label": {"ru": "Давление", "en": "Pressure"}, "text": {"ru": "9 бар", "en": "9 bar"}}
+      ],
+      "steps": [
+        {"n": 1, "title": {"ru": "Смолоть кофе", "en": "Grind the coffee"}, "text": {"ru": "Смолите {coffee} кофе. Помол мелкий — как мелкая соль, но не в пудру.", "en": "Grind {coffee} of coffee, fine like table salt."}, "tip": {"ru": "Мелите непосредственно перед приготовлением: аромат уходит за 10–15 минут.", "en": "Grind right before brewing."}, "weight_check": {"ru": "{coffee}", "en": "{coffee}"}},
+        {"n": 2, "title": {"ru": "Прогреть рожок", "en": "Warm the portafilter"}, "text": {"ru": "Пролейте через пустой рожок горячую воду 2–3 секунды и насухо протрите корзину.", "en": "Flush the empty portafilter for 2-3 s and wipe the basket dry."}, "tip": {"ru": "Тёплый рожок убирает перепад температур и делает вкус ровнее.", "en": "A warm portafilter prevents temperature drop."}, "timer": 3},
+        {"n": 3, "title": {"ru": "Засыпать и распределить", "en": "Dose and distribute"}, "text": {"ru": "Засыпьте {coffee} молотого кофе, разровняйте пальцем или дистрибьютором.", "en": "Dose {coffee}, level the bed with a distributor."}, "tip": {"ru": "Неровная таблетка = кривой пролив и кислый вкус.", "en": "Uneven bed leads to channeling."}},
+        {"n": 4, "title": {"ru": "Темперовать", "en": "Tamp"}, "text": {"ru": "Утрамбуйте с усилием около 15–20 кг строго вертикально.", "en": "Tamp vertically with about 15-20 kg of force."}, "tip": {"ru": "Важнее не сила, а ровность: перекос темпера портит экстракцию.", "en": "Level matters more than force."}},
+        {"n": 5, "title": {"ru": "Пролить эспрессо", "en": "Pull the shot"}, "text": {"ru": "Вставьте рожок и сразу запустите пролив. Цель — {water} за 25–30 секунд.", "en": "Lock in and start immediately. Target {water} in 25-30 s."}, "tip": {"ru": "Быстрее 22 с — сделайте помол мельче, дольше 33 с — крупнее.", "en": "Faster than 22 s - grind finer."}, "timer": 27, "weight_check": {"ru": "{water}", "en": "{water}"}},
+        {"n": 6, "title": {"ru": "Подать", "en": "Serve"}, "text": {"ru": "Подавайте в прогретой чашке 60–80 мл сразу после пролива.", "en": "Serve in a warm 60-80 ml cup right away."}, "tip": {"ru": "Крема живёт 1–2 минуты — эспрессо не ждёт.", "en": "Crema lasts 1-2 minutes."}}
+      ],
+      "tips": [
+        {"ru": "Свежесть зерна: идеально 7–21 день после обжарки.", "en": "Use beans 7-21 days after roast."},
+        {"ru": "Соотношение 1:2 (кофе:напиток) — универсальная отправная точка.", "en": "A 1:2 ratio is a solid starting point."},
+        {"ru": "Промывайте группу перед каждым проливом.", "en": "Flush the group before each shot."}
+      ]
+    },
+    {
+      "id": "coffee_americano",
+      "kind": "coffee",
+      "category": "base",
+      "icon": "☕",
+      "name": {"ru": "Американо", "en": "Americano"},
+      "subtitle": {"ru": "Эспрессо + горячая вода", "en": "Espresso + hot water"},
+      "desc": {"ru": "Мягкий чёрный кофе: эспрессо, разбавленный горячей водой до объёма 120–180 мл.", "en": "Espresso diluted with hot water to 120-180 ml."},
+      "base_servings": 1,
+      "servings_options": [1, 2],
+      "params": [
+        {"key": "coffee", "label": {"ru": "Кофе", "en": "Coffee"}, "value": 18, "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Выход эспрессо", "en": "Espresso yield"}, "value": 36, "unit": "ml", "scale": true},
+        {"key": "hot", "label": {"ru": "Горячая вода", "en": "Hot water"}, "value": 120, "unit": "ml", "scale": true},
+        {"key": "temp", "label": {"ru": "Температура воды", "en": "Water temp"}, "text": {"ru": "92–94 °C", "en": "92-94 °C"}},
+        {"key": "grind", "label": {"ru": "Помол", "en": "Grind"}, "text": {"ru": "Мелкий", "en": "Fine"}},
+        {"key": "time", "label": {"ru": "Время пролива", "en": "Extraction"}, "text": {"ru": "25–30 с", "en": "25-30 s"}}
+      ],
+      "steps": [
+        {"n": 1, "title": {"ru": "Приготовить эспрессо", "en": "Pull espresso"}, "text": {"ru": "Смолите {coffee}, темперуйте и пролейте {water} за 25–30 секунд.", "en": "Grind {coffee} and pull {water} in 25-30 s."}, "tip": {"ru": "Для американо берите обжарку посветлее — кислотность раскроется.", "en": "Lighter roasts shine here."}, "timer": 27},
+        {"n": 2, "title": {"ru": "Нагреть воду", "en": "Heat the water"}, "text": {"ru": "Нагрейте {hot} воды до 92–94 °C.", "en": "Heat {hot} of water to 92-94 °C."}, "tip": {"ru": "Кипяток «сожжёт» вкус: дайте воде остыть 30–40 секунд.", "en": "Let boiling water rest 30-40 s."}},
+        {"n": 3, "title": {"ru": "Соединить", "en": "Combine"}, "text": {"ru": "Влейте эспрессо в воду (а не наоборот) — так сохранится крема.", "en": "Pour espresso into the water to keep the crema."}, "tip": {"ru": "Классический «итальянский» способ — наоборот, вода в эспрессо: вкус будет ровнее, но без пенки.", "en": "The Italian way is water into espresso."}},
+        {"n": 4, "title": {"ru": "Подать", "en": "Serve"}, "text": {"ru": "Подавайте в прогретой чашке 180–250 мл.", "en": "Serve in a preheated 180-250 ml cup."}, "tip": {"ru": "Холодная чашка забирает до 10 °C — прогрейте её кипятком.", "en": "A cold cup steals up to 10 °C."}}
+      ],
+      "tips": [
+        {"ru": "Пропорция эспрессо:вода от 1:2 до 1:4 — по вкусу.", "en": "Ratio 1:2 to 1:4 to taste."},
+        {"ru": "Лонг-блэк = вода сначала, американо = вода потом.", "en": "Long black pours espresso last."}
+      ]
+    },
+    {
+      "id": "coffee_cappuccino",
+      "kind": "coffee",
+      "category": "base",
+      "icon": "☕",
+      "name": {"ru": "Капучино", "en": "Cappuccino"},
+      "subtitle": {"ru": "Эспрессо + молоко + плотная пена", "en": "Espresso + milk + dense foam"},
+      "desc": {"ru": "Классика: треть эспрессо, треть молока, треть бархатной пены. Объём 150–180 мл.", "en": "One third espresso, one third milk, one third velvety foam."},
+      "base_servings": 1,
+      "servings_options": [1, 2],
+      "params": [
+        {"key": "coffee", "label": {"ru": "Кофе", "en": "Coffee"}, "value": 18, "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Выход эспрессо", "en": "Espresso yield"}, "value": 36, "unit": "ml", "scale": true},
+        {"key": "milk", "label": {"ru": "Молоко", "en": "Milk"}, "value": 120, "unit": "ml", "scale": true},
+        {"key": "temp", "label": {"ru": "Температура воды", "en": "Water temp"}, "text": {"ru": "92–94 °C", "en": "92-94 °C"}},
+        {"key": "milktemp", "label": {"ru": "Температура молока", "en": "Milk temp"}, "text": {"ru": "60–65 °C", "en": "60-65 °C"}},
+        {"key": "grind", "label": {"ru": "Помол", "en": "Grind"}, "text": {"ru": "Мелкий", "en": "Fine"}},
+        {"key": "time", "label": {"ru": "Время пролива", "en": "Extraction"}, "text": {"ru": "25–30 с", "en": "25-30 s"}}
+      ],
+      "steps": [
+        {"n": 1, "title": {"ru": "Прогреть кружку", "en": "Warm the cup"}, "text": {"ru": "Ополосните чашку 150–180 мл кипятком и вылейте воду.", "en": "Rinse a 150-180 ml cup with hot water."}, "tip": {"ru": "Тёплая чашка держит температуру напитка на 5–7 минут дольше.", "en": "A warm cup holds heat much longer."}},
+        {"n": 2, "title": {"ru": "Приготовить эспрессо", "en": "Pull espresso"}, "text": {"ru": "Смолите {coffee}, темперуйте и пролейте {water} за 25–30 секунд прямо в чашку.", "en": "Grind {coffee} and pull {water} straight into the cup."}, "tip": {"ru": "Готовьте эспрессо и молоко параллельно: капучино не любит пауз.", "en": "Work espresso and milk in parallel."}, "timer": 27, "weight_check": {"ru": "{coffee}", "en": "{coffee}"}},
+        {"n": 3, "title": {"ru": "Взбить молоко", "en": "Steam the milk"}, "text": {"ru": "Налейте {milk} холодного молока в питчер. Вспенивайте 3–5 секунд у поверхности, затем утопите носик и грейте до 60–65 °C.", "en": "Pour {milk} of cold milk, aerate 3-5 s, then heat to 60-65 °C."}, "tip": {"ru": "Молоко лучше холодное (4 °C) и жирностью 3,2% — пена плотнее и слаще.", "en": "Cold 3.2% milk foams best."}, "timer": 25},
+        {"n": 4, "title": {"ru": "Довести пену", "en": "Polish the foam"}, "text": {"ru": "Постучите питчером по столу, чтобы лопнули крупные пузыри, и покрутите молоко 5–10 секунд.", "en": "Tap and swirl the pitcher for 5-10 s."}, "tip": {"ru": "Правильная пена блестит и течёт как краска, а не стоит «шапкой».", "en": "Good foam flows like wet paint."}},
+        {"n": 5, "title": {"ru": "Влить молоко", "en": "Pour"}, "text": {"ru": "Вливайте с высоты 5–7 см в центр, затем опустите питчер ближе — получится белое пятно и рисунок.", "en": "Pour from 5-7 cm, then lower the pitcher."}, "tip": {"ru": "Пена должна быть 1–1,5 см — это и отличает капучино от латте.", "en": "1-1.5 cm of foam defines a cappuccino."}}
+      ],
+      "tips": [
+        {"ru": "Не грейте молоко выше 70 °C — белок сворачивается, появляется «варёный» привкус.", "en": "Never exceed 70 °C."},
+        {"ru": "Перевзбитое молоко нельзя исправить — вылейте и начните заново.", "en": "Over-aerated milk cannot be fixed."}
+      ]
+    },
+    {
+      "id": "coffee_latte",
+      "kind": "coffee",
+      "category": "base",
+      "icon": "☕",
+      "name": {"ru": "Латте", "en": "Latte"},
+      "subtitle": {"ru": "Много молока, тонкая пена", "en": "Milky and mild"},
+      "desc": {"ru": "Мягкий молочный напиток объёмом 250–300 мл с тонким слоем пены 0,5 см.", "en": "Mild milky drink, 250-300 ml, with a thin 0.5 cm foam layer."},
+      "base_servings": 1,
+      "servings_options": [1, 2],
+      "params": [
+        {"key": "coffee", "label": {"ru": "Кофе", "en": "Coffee"}, "value": 18, "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Выход эспрессо", "en": "Espresso yield"}, "value": 36, "unit": "ml", "scale": true},
+        {"key": "milk", "label": {"ru": "Молоко", "en": "Milk"}, "value": 220, "unit": "ml", "scale": true},
+        {"key": "milktemp", "label": {"ru": "Температура молока", "en": "Milk temp"}, "text": {"ru": "60–65 °C", "en": "60-65 °C"}},
+        {"key": "grind", "label": {"ru": "Помол", "en": "Grind"}, "text": {"ru": "Мелкий", "en": "Fine"}},
+        {"key": "time", "label": {"ru": "Время пролива", "en": "Extraction"}, "text": {"ru": "25–30 с", "en": "25-30 s"}}
+      ],
+      "steps": [
+        {"n": 1, "title": {"ru": "Приготовить эспрессо", "en": "Pull espresso"}, "text": {"ru": "Пролейте {water} эспрессо из {coffee} кофе в бокал 300 мл.", "en": "Pull {water} from {coffee} into a 300 ml glass."}, "tip": {"ru": "Для латте берите двойной эспрессо — иначе молоко «съест» вкус.", "en": "Use a double shot so milk doesn't hide the coffee."}, "timer": 27},
+        {"n": 2, "title": {"ru": "Взбить молоко", "en": "Steam the milk"}, "text": {"ru": "Вспенивайте {milk} молока 2–3 секунды, затем прогрейте до 60–65 °C.", "en": "Aerate {milk} for 2-3 s and heat to 60-65 °C."}, "tip": {"ru": "Для латте воздуха нужно меньше, чем для капучино: пена тоньше.", "en": "Less air than a cappuccino."}, "timer": 30},
+        {"n": 3, "title": {"ru": "Влить молоко", "en": "Pour"}, "text": {"ru": "Вливайте молоко тонкой струёй по центру, в конце ускорьте для рисунка.", "en": "Pour steadily into the centre."}, "tip": {"ru": "Слои получаются, если вливать медленно и с высоты 10 см.", "en": "Pour high and slow for layers."}}
+      ],
+      "tips": [
+        {"ru": "Растительное молоко берите с пометкой barista — обычное сворачивается.", "en": "Use barista plant milks."},
+        {"ru": "Латте макиато — обратный порядок: сначала молоко, потом эспрессо.", "en": "Latte macchiato reverses the order."}
+      ]
+    },
+    {
+      "id": "coffee_flat_white",
+      "kind": "coffee",
+      "category": "base",
+      "icon": "☕",
+      "name": {"ru": "Флэт Уайт", "en": "Flat White"},
+      "subtitle": {"ru": "Двойной эспрессо + микропена", "en": "Double shot + microfoam"},
+      "desc": {"ru": "Насыщенный кофейно-молочный напиток 150–180 мл: двойной эспрессо и шелковистая микропена без «шапки».", "en": "Strong 150-180 ml drink: double ristretto and silky microfoam."},
+      "base_servings": 1,
+      "servings_options": [1, 2],
+      "params": [
+        {"key": "coffee", "label": {"ru": "Кофе", "en": "Coffee"}, "value": 18, "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Выход эспрессо", "en": "Espresso yield"}, "value": 30, "unit": "ml", "scale": true},
+        {"key": "milk", "label": {"ru": "Молоко", "en": "Milk"}, "value": 130, "unit": "ml", "scale": true},
+        {"key": "milktemp", "label": {"ru": "Температура молока", "en": "Milk temp"}, "text": {"ru": "55–60 °C", "en": "55-60 °C"}},
+        {"key": "grind", "label": {"ru": "Помол", "en": "Grind"}, "text": {"ru": "Мелкий, чуть мельче обычного", "en": "Fine"}},
+        {"key": "time", "label": {"ru": "Время пролива", "en": "Extraction"}, "text": {"ru": "22–26 с", "en": "22-26 s"}}
+      ],
+      "steps": [
+        {"n": 1, "title": {"ru": "Пролить ристретто", "en": "Pull ristretto"}, "text": {"ru": "Из {coffee} кофе пролейте {water} — более плотный и сладкий напиток.", "en": "Pull {water} from {coffee} for a sweeter, denser base."}, "tip": {"ru": "Короткий пролив даёт меньше горечи — то, что нужно под молоко.", "en": "A short shot keeps bitterness away."}, "timer": 24},
+        {"n": 2, "title": {"ru": "Взбить микропену", "en": "Steam microfoam"}, "text": {"ru": "Вспенивайте {milk} всего 1–2 секунды и прогрейте до 55–60 °C, активно закручивая.", "en": "Aerate {milk} for 1-2 s only, heat to 55-60 °C."}, "tip": {"ru": "Флэт уайт — про глянцевое молоко без пузырей, пена не выше 0,5 см.", "en": "Glossy milk, foam under 0.5 cm."}, "timer": 22},
+        {"n": 3, "title": {"ru": "Собрать напиток", "en": "Assemble"}, "text": {"ru": "Влейте молоко в чашку 150–180 мл, удерживая пену ложкой в питчере в начале.", "en": "Pour into a 150-180 ml cup."}, "tip": {"ru": "Подавайте сразу: микропена расслаивается за 1–2 минуты.", "en": "Serve immediately."}}
+      ],
+      "tips": [
+        {"ru": "Классический флэт уайт делают в керамике — она держит тепло.", "en": "Ceramic keeps the heat."},
+        {"ru": "Чем меньше молока, тем ярче кофейный вкус — 130 мл оптимально.", "en": "130 ml of milk is the sweet spot."}
+      ]
+    },
+    {
+      "id": "coffee_raf",
+      "kind": "coffee",
+      "category": "base",
+      "icon": "☕",
+      "name": {"ru": "Раф", "en": "Raf Coffee"},
+      "subtitle": {"ru": "Сливки + ванильный сахар", "en": "Cream + vanilla sugar"},
+      "desc": {"ru": "Сливочно-нежный напиток: эспрессо взбивается вместе со сливками и ванильным сахаром.", "en": "Creamy drink: espresso steamed together with cream and vanilla sugar."},
+      "base_servings": 1,
+      "servings_options": [1, 2],
+      "params": [
+        {"key": "coffee", "label": {"ru": "Кофе", "en": "Coffee"}, "value": 18, "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Выход эспрессо", "en": "Espresso yield"}, "value": 36, "unit": "ml", "scale": true},
+        {"key": "cream", "label": {"ru": "Сливки 10–11%", "en": "Cream 10-11%"}, "value": 120, "unit": "ml", "scale": true},
+        {"key": "sugar", "label": {"ru": "Ванильный сахар", "en": "Vanilla sugar"}, "value": 10, "unit": "g", "scale": true},
+        {"key": "milktemp", "label": {"ru": "Температура взбивания", "en": "Steam temp"}, "text": {"ru": "60–65 °C", "en": "60-65 °C"}},
+        {"key": "grind", "label": {"ru": "Помол", "en": "Grind"}, "text": {"ru": "Мелкий", "en": "Fine"}}
+      ],
+      "steps": [
+        {"n": 1, "title": {"ru": "Приготовить эспрессо", "en": "Pull espresso"}, "text": {"ru": "Пролейте {water} эспрессо из {coffee} кофе прямо в питчер.", "en": "Pull {water} from {coffee} directly into the pitcher."}, "tip": {"ru": "Раф собирают в питчере целиком — так вкус получается однородным.", "en": "Everything goes into the pitcher."}, "timer": 27},
+        {"n": 2, "title": {"ru": "Добавить сливки и сахар", "en": "Add cream and sugar"}, "text": {"ru": "Влейте {cream} сливок и всыпьте {sugar} ванильного сахара.", "en": "Add {cream} of cream and {sugar} of vanilla sugar."}, "tip": {"ru": "Сахар кладите до взбивания: он полностью растворится в горячем напитке.", "en": "Add sugar before steaming."}},
+        {"n": 3, "title": {"ru": "Взбить всё вместе", "en": "Steam everything"}, "text": {"ru": "Взбейте смесь паром до 60–65 °C, добавив немного воздуха в начале.", "en": "Steam the mix to 60-65 °C."}, "tip": {"ru": "Сливки пенятся хуже молока — держите носик глубже и дольше крутите.", "en": "Cream foams slower than milk."}, "timer": 35},
+        {"n": 4, "title": {"ru": "Подать", "en": "Serve"}, "text": {"ru": "Перелейте в прогретую чашку 250–300 мл.", "en": "Serve in a warm 250-300 ml cup."}, "tip": {"ru": "Сверху можно присыпать корицей или тёртым шоколадом.", "en": "Dust with cinnamon if you like."}}
+      ],
+      "tips": [
+        {"ru": "Жирность сливок 10–11% — золотая середина: 20% дают тяжесть.", "en": "10-11% cream is ideal."},
+        {"ru": "Вместо ванильного сахара можно взять 15 мл ванильного сиропа.", "en": "15 ml vanilla syrup works too."}
+      ]
+    },
+    {
+      "id": "coffee_caramel_latte",
+      "kind": "coffee",
+      "category": "author",
+      "icon": "🍮",
+      "name": {"ru": "Карамельный латте", "en": "Caramel Latte"},
+      "subtitle": {"ru": "Авторский рецепт", "en": "Signature"},
+      "desc": {"ru": "Латте с солёной карамелью: сладкий, с лёгкой солоноватой ноткой в финале.", "en": "Latte with salted caramel and a gentle salty finish."},
+      "base_servings": 1,
+      "servings_options": [1, 2],
+      "params": [
+        {"key": "coffee", "label": {"ru": "Кофе", "en": "Coffee"}, "value": 18, "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Выход эспрессо", "en": "Espresso yield"}, "value": 36, "unit": "ml", "scale": true},
+        {"key": "milk", "label": {"ru": "Молоко", "en": "Milk"}, "value": 200, "unit": "ml", "scale": true},
+        {"key": "syrup", "label": {"ru": "Карамельный сироп", "en": "Caramel syrup"}, "value": 20, "unit": "ml", "scale": true},
+        {"key": "salt", "label": {"ru": "Соль", "en": "Salt"}, "text": {"ru": "1 щепотка", "en": "1 pinch"}},
+        {"key": "milktemp", "label": {"ru": "Температура молока", "en": "Milk temp"}, "text": {"ru": "60–65 °C", "en": "60-65 °C"}}
+      ],
+      "steps": [
+        {"n": 1, "title": {"ru": "Подготовить бокал", "en": "Prepare the glass"}, "text": {"ru": "Влейте {syrup} карамельного сиропа на дно бокала 300 мл и добавьте щепотку соли.", "en": "Pour {syrup} of caramel syrup into a 300 ml glass, add a pinch of salt."}, "tip": {"ru": "Соль усиливает карамель — буквально пара кристаллов.", "en": "Salt amplifies caramel."}},
+        {"n": 2, "title": {"ru": "Приготовить эспрессо", "en": "Pull espresso"}, "text": {"ru": "Пролейте {water} эспрессо из {coffee} кофе прямо на сироп и размешайте.", "en": "Pull {water} from {coffee} onto the syrup and stir."}, "tip": {"ru": "Горячий эспрессо растворяет сироп лучше, чем молоко.", "en": "Hot espresso dissolves syrup best."}, "timer": 27},
+        {"n": 3, "title": {"ru": "Взбить молоко", "en": "Steam the milk"}, "text": {"ru": "Взбейте {milk} молока до 60–65 °C с тонкой пеной.", "en": "Steam {milk} to 60-65 °C."}, "tip": {"ru": "Не перегревайте: сладкие напитки при 70 °C дают привкус варёного молока.", "en": "Don't overheat sweet drinks."}, "timer": 30},
+        {"n": 4, "title": {"ru": "Собрать и украсить", "en": "Assemble"}, "text": {"ru": "Влейте молоко, сверху добавьте каплю карамели и щепотку морской соли.", "en": "Pour the milk, finish with caramel and sea salt."}, "tip": {"ru": "Сироп по стенкам бокала даёт красивые разводы.", "en": "Drizzle syrup on the glass walls."}}
+      ],
+      "tips": [
+        {"ru": "Домашняя карамель: 100 г сахара + 50 мл воды + 50 мл сливок на медленном огне.", "en": "Homemade caramel: sugar, water, cream."},
+        {"ru": "Летом подавайте со льдом: 150 мл молока + 100 г льда.", "en": "Serve iced in summer."}
+      ]
+    },
+    {
+      "id": "coffee_nut_raf",
+      "kind": "coffee",
+      "category": "author",
+      "icon": "🥜",
+      "name": {"ru": "Ореховый раф", "en": "Nutty Raf"},
+      "subtitle": {"ru": "Авторский рецепт", "en": "Signature"},
+      "desc": {"ru": "Раф на сливках с ореховым сиропом и пастой фундука — плотный десертный напиток.", "en": "Raf with hazelnut syrup and nut butter - a dessert in a cup."},
+      "base_servings": 1,
+      "servings_options": [1, 2],
+      "params": [
+        {"key": "coffee", "label": {"ru": "Кофе", "en": "Coffee"}, "value": 18, "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Выход эспрессо", "en": "Espresso yield"}, "value": 36, "unit": "ml", "scale": true},
+        {"key": "cream", "label": {"ru": "Сливки 10%", "en": "Cream 10%"}, "value": 120, "unit": "ml", "scale": true},
+        {"key": "syrup", "label": {"ru": "Ореховый сироп", "en": "Nut syrup"}, "value": 15, "unit": "ml", "scale": true},
+        {"key": "paste", "label": {"ru": "Паста фундука", "en": "Hazelnut butter"}, "value": 8, "unit": "g", "scale": true},
+        {"key": "milktemp", "label": {"ru": "Температура взбивания", "en": "Steam temp"}, "text": {"ru": "60–65 °C", "en": "60-65 °C"}}
+      ],
+      "steps": [
+        {"n": 1, "title": {"ru": "Смешать основу", "en": "Mix the base"}, "text": {"ru": "В питчер положите {paste} ореховой пасты и влейте {syrup} сиропа.", "en": "Put {paste} of nut butter and {syrup} of syrup into the pitcher."}, "tip": {"ru": "Пасту разомните ложкой, иначе останутся комочки.", "en": "Mash the butter first."}},
+        {"n": 2, "title": {"ru": "Добавить эспрессо", "en": "Add espresso"}, "text": {"ru": "Пролейте {water} эспрессо из {coffee} кофе прямо в питчер и размешайте до однородности.", "en": "Pull {water} from {coffee} into the pitcher and stir."}, "tip": {"ru": "Горячий кофе растапливает пасту — размешивайте сразу.", "en": "Stir while hot."}, "timer": 27},
+        {"n": 3, "title": {"ru": "Влить сливки и взбить", "en": "Add cream and steam"}, "text": {"ru": "Добавьте {cream} сливок и взбейте паром до 60–65 °C.", "en": "Add {cream} and steam to 60-65 °C."}, "tip": {"ru": "Смесь с пастой пенится хуже — держите носик глубже.", "en": "Keep the wand deeper."}, "timer": 35},
+        {"n": 4, "title": {"ru": "Подать", "en": "Serve"}, "text": {"ru": "Перелейте в чашку 300 мл, присыпьте дроблёным фундуком.", "en": "Serve in a 300 ml cup, top with crushed hazelnuts."}, "tip": {"ru": "Орехи подсушите на сковороде 2 минуты — аромат ярче.", "en": "Toast the nuts briefly."}}
+      ],
+      "tips": [
+        {"ru": "Паста должна быть без сахара и пальмового масла — только орех.", "en": "Use pure nut butter."},
+        {"ru": "Тот же приём работает с фисташкой и миндалём.", "en": "Works with pistachio too."}
+      ]
+    },
+
+    {
+      "id": "tea_shu_puer",
+      "kind": "tea",
+      "category": "base",
+      "icon": "🍵",
+      "name": {"ru": "Шу Пуэр", "en": "Shou Puer"},
+      "subtitle": {"ru": "Юньнань, Китай · постферментированный", "en": "Yunnan, China - post-fermented"},
+      "desc": {"ru": "Тёмный постферментированный чай. Густой настой цвета коньяка, вкус земляной, с нотами чернослива, древесины и какао.", "en": "Dark post-fermented tea: thick brandy-coloured liquor, earthy with prune and cacao notes."},
+      "base_servings": 1,
+      "servings_options": [1, 2, 3],
+      "params": [
+        {"key": "tea", "label": {"ru": "Чай", "en": "Tea"}, "value": [5, 6], "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Объём воды", "en": "Water"}, "value": [100, 150], "unit": "ml", "scale": true},
+        {"key": "temp", "label": {"ru": "Температура воды", "en": "Water temp"}, "text": {"ru": "95–100 °C", "en": "95-100 °C"}},
+        {"key": "ware", "label": {"ru": "Посуда", "en": "Teaware"}, "text": {"ru": "Гайвань или исинский чайник", "en": "Gaiwan or Yixing pot"}},
+        {"key": "count", "label": {"ru": "Проливов", "en": "Infusions"}, "text": {"ru": "8–12", "en": "8-12"}},
+        {"key": "first", "label": {"ru": "Первый пролив", "en": "First infusion"}, "text": {"ru": "5–10 с", "en": "5-10 s"}},
+        {"key": "next", "label": {"ru": "Последующие", "en": "Next infusions"}, "text": {"ru": "+5 с к каждому", "en": "+5 s each"}}
+      ],
+      "infusions": {"count": 10, "first": 8, "step": 5},
+      "steps": [
+        {"n": 1, "title": {"ru": "Подготовить воду", "en": "Prepare the water"}, "text": {"ru": "Нагрейте {water} воды до 95–100 °C. Используйте фильтрованную или бутилированную воду.", "en": "Heat {water} to 95-100 °C, filtered or bottled."}, "tip": {"ru": "Мягкая вода даёт более чистый вкус без посторонних нот.", "en": "Soft water gives a cleaner taste."}},
+        {"n": 2, "title": {"ru": "Прогреть посуду", "en": "Warm the teaware"}, "text": {"ru": "Ополосните гайвань, чахай и чашки кипятком и слейте воду.", "en": "Rinse gaiwan, pitcher and cups with hot water."}, "tip": {"ru": "Прогретая посуда раскрывает аромат сухого листа — понюхайте его после прогрева.", "en": "Warm ware reveals the dry leaf aroma."}, "timer": 10},
+        {"n": 3, "title": {"ru": "Промыть чай", "en": "Rinse the tea"}, "text": {"ru": "Засыпьте {tea} чая, залейте водой и сразу слейте (3–5 секунд). Этот настой не пьют.", "en": "Add {tea}, fill and discard after 3-5 s."}, "tip": {"ru": "Промывка убирает пыль и «будит» прессованный лист.", "en": "The rinse wakes up compressed leaves."}, "timer": 5, "weight_check": {"ru": "{tea}", "en": "{tea}"}},
+        {"n": 4, "title": {"ru": "Первый пролив", "en": "First infusion"}, "text": {"ru": "Залейте {water} воды, подождите 5–10 секунд и полностью слейте настой в чахай, затем разлейте по чашкам.", "en": "Fill with {water}, wait 5-10 s, decant fully into the pitcher."}, "tip": {"ru": "Сливайте до последней капли: оставшаяся вода перезаваривает лист.", "en": "Decant to the last drop."}, "timer": 8, "repeatable": true, "timer_step": 5},
+        {"n": 5, "title": {"ru": "Последующие проливы", "en": "Next infusions"}, "text": {"ru": "С каждым проливом увеличивайте время на 5 секунд: 15 с, 20 с, 25 с и так далее. Всего 8–12 проливов.", "en": "Add 5 s to every next infusion, 8-12 total."}, "tip": {"ru": "Если вкус стал слишком плотным — сократите время, а не доливайте воду в чашку.", "en": "Shorten the steep instead of diluting."}, "timer": 15, "repeatable": true, "timer_step": 5},
+        {"n": 6, "title": {"ru": "Завершить чаепитие", "en": "Finish"}, "text": {"ru": "Когда настой станет светлым и водянистым, лист исчерпан. Можно сделать долгую «варку» 3–5 минут на остатке.", "en": "When the liquor turns pale, do a final 3-5 minute steep."}, "tip": {"ru": "Последний долгий пролив вытягивает остатки сладости.", "en": "A long final steep pulls out the sweetness."}, "timer": 180}
+      ],
+      "tips": [
+        {"ru": "Между проливами чай можно оставить без воды на 5–10 минут — лист «отдыхает», вкус не портится.", "en": "Leaves can rest dry for 5-10 minutes between infusions."},
+        {"ru": "Прессованный блин отделяйте чайным ножом пластами, а не крошите — крошка даёт горечь.", "en": "Pry cakes apart in layers, don't crumble."},
+        {"ru": "Шу пуэр прощает крутой кипяток — в отличие от зелёного чая.", "en": "Shou puer tolerates boiling water."},
+        {"ru": "Хранить: сухое тёмное место без посторонних запахов, не в холодильнике.", "en": "Store dry, dark, never in the fridge."},
+        {"ru": "Чай «исчерпан», когда вкус стал водянистым и пустым — обычно после 10–12 проливов.", "en": "Tea is spent when the taste goes watery."}
+      ]
+    },
+    {
+      "id": "tea_sheng_puer",
+      "kind": "tea",
+      "category": "base",
+      "icon": "🍃",
+      "name": {"ru": "Шэн Пуэр", "en": "Sheng Puer"},
+      "subtitle": {"ru": "Юньнань · зелёный (сырой) пуэр", "en": "Yunnan - raw puer"},
+      "desc": {"ru": "Сырой пуэр естественной ферментации: яркий, терпкий, с дымком, цветочной кислинкой и долгим сладким послевкусием.", "en": "Raw puer: bright, astringent, smoky, with a long sweet aftertaste."},
+      "base_servings": 1,
+      "servings_options": [1, 2, 3],
+      "params": [
+        {"key": "tea", "label": {"ru": "Чай", "en": "Tea"}, "value": [4, 5], "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Объём воды", "en": "Water"}, "value": [100, 120], "unit": "ml", "scale": true},
+        {"key": "temp", "label": {"ru": "Температура воды", "en": "Water temp"}, "text": {"ru": "85–95 °C", "en": "85-95 °C"}},
+        {"key": "ware", "label": {"ru": "Посуда", "en": "Teaware"}, "text": {"ru": "Фарфоровая гайвань", "en": "Porcelain gaiwan"}},
+        {"key": "count", "label": {"ru": "Проливов", "en": "Infusions"}, "text": {"ru": "10–15", "en": "10-15"}},
+        {"key": "first", "label": {"ru": "Первый пролив", "en": "First infusion"}, "text": {"ru": "5 с", "en": "5 s"}},
+        {"key": "next", "label": {"ru": "Последующие", "en": "Next infusions"}, "text": {"ru": "+5 с к каждому", "en": "+5 s each"}}
+      ],
+      "infusions": {"count": 12, "first": 5, "step": 5},
+      "steps": [
+        {"n": 1, "title": {"ru": "Подготовить воду", "en": "Prepare the water"}, "text": {"ru": "Нагрейте {water} воды до 85–95 °C — молодой шэн не любит крутой кипяток.", "en": "Heat {water} to 85-95 °C; young sheng dislikes boiling water."}, "tip": {"ru": "Чем моложе блин, тем ниже температура: кипяток даёт резкую горечь.", "en": "Younger cakes need cooler water."}},
+        {"n": 2, "title": {"ru": "Прогреть гайвань", "en": "Warm the gaiwan"}, "text": {"ru": "Ополосните посуду кипятком, засыпьте {tea} чая и встряхните — оцените аромат.", "en": "Rinse the ware, add {tea} and smell the warmed leaves."}, "tip": {"ru": "Фарфор не забирает аромат, в отличие от глины — для шэна он предпочтительнее.", "en": "Porcelain keeps the aroma intact."}, "timer": 10},
+        {"n": 3, "title": {"ru": "Быстрая промывка", "en": "Quick rinse"}, "text": {"ru": "Залейте и немедленно слейте (2–3 секунды).", "en": "Fill and discard within 2-3 s."}, "tip": {"ru": "Шэн промывают быстрее шу: долгая промывка забирает вкус.", "en": "Rinse sheng faster than shou."}, "timer": 3},
+        {"n": 4, "title": {"ru": "Первый пролив", "en": "First infusion"}, "text": {"ru": "Залейте {water} и слейте через 5 секунд. Настой светло-золотистый.", "en": "Steep 5 s and decant. The liquor is pale gold."}, "tip": {"ru": "Лейте воду по стенке, а не на лист — меньше горечи.", "en": "Pour along the wall, not onto the leaves."}, "timer": 5, "repeatable": true, "timer_step": 5},
+        {"n": 5, "title": {"ru": "Последующие проливы", "en": "Next infusions"}, "text": {"ru": "10 с, 15 с, 20 с… Держите 10–15 проливов, отслеживая горечь.", "en": "10 s, 15 s, 20 s and so on for 10-15 infusions."}, "tip": {"ru": "Горечь у шэна должна быстро уходить в сладость — это признак качества.", "en": "Bitterness should turn to sweetness quickly."}, "timer": 10, "repeatable": true, "timer_step": 5}
+      ],
+      "tips": [
+        {"ru": "Шэн бодрит сильнее кофе — не пейте вечером и не на голодный желудок.", "en": "Sheng is very stimulating; avoid on an empty stomach."},
+        {"ru": "С возрастом (5–10 лет) шэн становится мягче и слаще.", "en": "Aged sheng mellows and sweetens."},
+        {"ru": "Хранить в проветриваемом месте при влажности 60–70%.", "en": "Store ventilated at 60-70% humidity."}
+      ]
+    },
+    {
+      "id": "tea_green",
+      "kind": "tea",
+      "category": "base",
+      "icon": "🌿",
+      "name": {"ru": "Зелёный чай", "en": "Green tea"},
+      "subtitle": {"ru": "Китай / Япония · неферментированный", "en": "China / Japan - unoxidised"},
+      "desc": {"ru": "Свежий травянистый чай с нотами свежескошенной травы, орехов и сладкого горошка. Не терпит кипятка.", "en": "Fresh grassy tea with nutty and sweet-pea notes. Never use boiling water."},
+      "base_servings": 1,
+      "servings_options": [1, 2, 3],
+      "params": [
+        {"key": "tea", "label": {"ru": "Чай", "en": "Tea"}, "value": [3, 4], "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Объём воды", "en": "Water"}, "value": 150, "unit": "ml", "scale": true},
+        {"key": "temp", "label": {"ru": "Температура воды", "en": "Water temp"}, "text": {"ru": "75–80 °C", "en": "75-80 °C"}},
+        {"key": "ware", "label": {"ru": "Посуда", "en": "Teaware"}, "text": {"ru": "Гайвань или стеклянный типот", "en": "Gaiwan or glass teapot"}},
+        {"key": "count", "label": {"ru": "Проливов", "en": "Infusions"}, "text": {"ru": "3–5", "en": "3-5"}},
+        {"key": "first", "label": {"ru": "Первый пролив", "en": "First infusion"}, "text": {"ru": "20–30 с", "en": "20-30 s"}},
+        {"key": "next", "label": {"ru": "Последующие", "en": "Next infusions"}, "text": {"ru": "+10 с к каждому", "en": "+10 s each"}}
+      ],
+      "infusions": {"count": 4, "first": 25, "step": 10},
+      "steps": [
+        {"n": 1, "title": {"ru": "Остудить воду", "en": "Cool the water"}, "text": {"ru": "Вскипятите воду и дайте остыть до 75–80 °C — примерно 4–5 минут в открытом чайнике.", "en": "Boil and let cool to 75-80 °C, about 4-5 minutes."}, "tip": {"ru": "Кипяток «сварит» лист: появится горечь и запах варёных овощей.", "en": "Boiling water cooks the leaf and adds bitterness."}, "timer": 240},
+        {"n": 2, "title": {"ru": "Прогреть посуду", "en": "Warm the ware"}, "text": {"ru": "Ополосните гайвань тёплой водой и засыпьте {tea} чая.", "en": "Rinse the gaiwan and add {tea}."}, "tip": {"ru": "Зелёный чай не промывают — сразу заваривают.", "en": "Green tea needs no rinse."}},
+        {"n": 3, "title": {"ru": "Первый пролив", "en": "First infusion"}, "text": {"ru": "Залейте {water} воды по стенке и слейте через 20–30 секунд.", "en": "Add {water} along the wall, steep 20-30 s."}, "tip": {"ru": "Не накрывайте крышкой плотно — листу нужен воздух.", "en": "Leave the lid slightly open."}, "timer": 25, "repeatable": true, "timer_step": 10},
+        {"n": 4, "title": {"ru": "Последующие проливы", "en": "Next infusions"}, "text": {"ru": "Второй — 35 с, третий — 45 с. Обычно чай выдерживает 3–5 проливов.", "en": "35 s, then 45 s; 3-5 infusions total."}, "tip": {"ru": "Не оставляйте лист в воде: зелёный быстро горчит.", "en": "Never leave leaves soaking."}, "timer": 35, "repeatable": true, "timer_step": 10}
+      ],
+      "tips": [
+        {"ru": "Хранить в холоде и темноте в герметичной упаковке — зелёный чай стареет быстрее всех.", "en": "Green tea ages fastest; store airtight."},
+        {"ru": "Японская сенча требует ещё ниже — 70 °C и всего 40–60 секунд.", "en": "Sencha wants 70 °C."},
+        {"ru": "Признак перезаварки — вяжущая плёнка на языке.", "en": "Astringent film means over-steeping."}
+      ]
+    },
+    {
+      "id": "tea_tieguanyin",
+      "kind": "tea",
+      "category": "base",
+      "icon": "🍂",
+      "name": {"ru": "Те Гуань Инь", "en": "Tie Guan Yin"},
+      "subtitle": {"ru": "Фуцзянь · улун слабой ферментации", "en": "Fujian - light oolong"},
+      "desc": {"ru": "Скрученный улун с мощным цветочно-сливочным ароматом сирени и орхидеи, сладким послевкусием.", "en": "Rolled oolong with a powerful floral and creamy aroma."},
+      "base_servings": 1,
+      "servings_options": [1, 2, 3],
+      "params": [
+        {"key": "tea", "label": {"ru": "Чай", "en": "Tea"}, "value": [6, 7], "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Объём воды", "en": "Water"}, "value": [110, 130], "unit": "ml", "scale": true},
+        {"key": "temp", "label": {"ru": "Температура воды", "en": "Water temp"}, "text": {"ru": "90–95 °C", "en": "90-95 °C"}},
+        {"key": "ware", "label": {"ru": "Посуда", "en": "Teaware"}, "text": {"ru": "Гайвань 120 мл", "en": "120 ml gaiwan"}},
+        {"key": "count", "label": {"ru": "Проливов", "en": "Infusions"}, "text": {"ru": "7–10", "en": "7-10"}},
+        {"key": "first", "label": {"ru": "Первый пролив", "en": "First infusion"}, "text": {"ru": "15 с", "en": "15 s"}},
+        {"key": "next", "label": {"ru": "Последующие", "en": "Next infusions"}, "text": {"ru": "+5 с к каждому", "en": "+5 s each"}}
+      ],
+      "infusions": {"count": 8, "first": 15, "step": 5},
+      "steps": [
+        {"n": 1, "title": {"ru": "Подготовить воду", "en": "Prepare water"}, "text": {"ru": "Нагрейте {water} воды до 90–95 °C.", "en": "Heat {water} to 90-95 °C."}, "tip": {"ru": "Улуну нужна горячая вода: шарики должны раскрыться.", "en": "Oolong needs heat to unfurl."}},
+        {"n": 2, "title": {"ru": "Прогреть и засыпать", "en": "Warm and dose"}, "text": {"ru": "Прогрейте гайвань, засыпьте {tea} чая, накройте и встряхните — аромат раскроется.", "en": "Warm the gaiwan, add {tea}, cover and shake."}, "tip": {"ru": "Скрученный улун занимает мало места, но разбухает в 4–5 раз.", "en": "Rolled oolong expands 4-5 times."}},
+        {"n": 3, "title": {"ru": "Промыть чай", "en": "Rinse"}, "text": {"ru": "Залейте и сразу слейте (3 секунды) — промывка раскрывает шарики.", "en": "Fill and discard after 3 s."}, "tip": {"ru": "Промывной настой можно вылить в чашки, чтобы их прогреть.", "en": "Use the rinse to warm the cups."}, "timer": 3},
+        {"n": 4, "title": {"ru": "Первый пролив", "en": "First infusion"}, "text": {"ru": "Залейте {water}, выдержите 15 секунд и слейте полностью.", "en": "Steep 15 s and decant fully."}, "tip": {"ru": "Нюхайте пустую чашку после чая — «аромат дна» у Те Гуань Инь особенно яркий.", "en": "Smell the empty cup afterwards."}, "timer": 15, "repeatable": true, "timer_step": 5},
+        {"n": 5, "title": {"ru": "Последующие проливы", "en": "Next infusions"}, "text": {"ru": "20 с, 25 с, 30 с… К 7–10 проливу лист раскроется полностью.", "en": "20 s, 25 s, 30 s up to 7-10 infusions."}, "tip": {"ru": "Улун — самый «выносливый» тип после пуэра.", "en": "Oolong endures many steeps."}, "timer": 20, "repeatable": true, "timer_step": 5}
+      ],
+      "tips": [
+        {"ru": "Слабоферментированный улун хранят в холодильнике в герметичной упаковке.", "en": "Green oolong keeps best refrigerated and sealed."},
+        {"ru": "Не заваривайте улун в заварнике «на весь день» — он рассчитан на проливы.", "en": "Oolong is made for short infusions."}
+      ]
+    },
+    {
+      "id": "tea_da_hong_pao",
+      "kind": "tea",
+      "category": "base",
+      "icon": "🪨",
+      "name": {"ru": "Да Хун Пао", "en": "Da Hong Pao"},
+      "subtitle": {"ru": "Уишань · сильнообжаренный утёсный улун", "en": "Wuyi - roasted rock oolong"},
+      "desc": {"ru": "Тёмный утёсный улун с обжаркой: тона печёных фруктов, карамели, дымка и характерный «минеральный» вкус камня.", "en": "Roasted cliff oolong with baked fruit, caramel and a mineral finish."},
+      "base_servings": 1,
+      "servings_options": [1, 2, 3],
+      "params": [
+        {"key": "tea", "label": {"ru": "Чай", "en": "Tea"}, "value": [6, 8], "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Объём воды", "en": "Water"}, "value": [110, 130], "unit": "ml", "scale": true},
+        {"key": "temp", "label": {"ru": "Температура воды", "en": "Water temp"}, "text": {"ru": "98–100 °C", "en": "98-100 °C"}},
+        {"key": "ware", "label": {"ru": "Посуда", "en": "Teaware"}, "text": {"ru": "Исинский чайник или гайвань", "en": "Yixing pot or gaiwan"}},
+        {"key": "count", "label": {"ru": "Проливов", "en": "Infusions"}, "text": {"ru": "8–12", "en": "8-12"}},
+        {"key": "first", "label": {"ru": "Первый пролив", "en": "First infusion"}, "text": {"ru": "10 с", "en": "10 s"}},
+        {"key": "next", "label": {"ru": "Последующие", "en": "Next infusions"}, "text": {"ru": "+5 с к каждому", "en": "+5 s each"}}
+      ],
+      "infusions": {"count": 10, "first": 10, "step": 5},
+      "steps": [
+        {"n": 1, "title": {"ru": "Кипяток", "en": "Boiling water"}, "text": {"ru": "Доведите {water} воды до 98–100 °C — обжаренный улун требует максимума.", "en": "Bring {water} to 98-100 °C."}, "tip": {"ru": "Низкая температура даст пустой, «плоский» настой.", "en": "Cooler water gives a flat brew."}},
+        {"n": 2, "title": {"ru": "Прогреть чайник", "en": "Warm the pot"}, "text": {"ru": "Хорошо прогрейте исинский чайник кипятком, затем засыпьте {tea} чая.", "en": "Warm the pot thoroughly, then add {tea}."}, "tip": {"ru": "Глина удерживает жар и смягчает обжарку.", "en": "Clay tames the roast."}, "timer": 15},
+        {"n": 3, "title": {"ru": "Промыть", "en": "Rinse"}, "text": {"ru": "Залейте кипятком и слейте через 5 секунд. Полейте настоем чайник снаружи.", "en": "Rinse for 5 s; pour the rinse over the pot."}, "tip": {"ru": "Обливание чайника снаружи держит температуру ровной.", "en": "Bathing the pot keeps heat steady."}, "timer": 5},
+        {"n": 4, "title": {"ru": "Первый пролив", "en": "First infusion"}, "text": {"ru": "Залейте {water} и слейте через 10 секунд в чахай.", "en": "Steep 10 s and decant."}, "tip": {"ru": "Первые 2–3 пролива дадут дым и обжарку, дальше проявятся фрукты.", "en": "Roast first, fruit later."}, "timer": 10, "repeatable": true, "timer_step": 5},
+        {"n": 5, "title": {"ru": "Последующие проливы", "en": "Next infusions"}, "text": {"ru": "15 с, 20 с, 25 с… Всего 8–12 проливов.", "en": "15 s, 20 s, 25 s, up to 8-12 infusions."}, "tip": {"ru": "«Ян Юнь» — минеральное послевкусие — появляется к 4–5 проливу.", "en": "The mineral finish appears around infusion 4-5."}, "timer": 15, "repeatable": true, "timer_step": 5}
+      ],
+      "tips": [
+        {"ru": "Свежеобжаренный чай лучше «отдохнуть» 1–2 месяца после покупки.", "en": "Let freshly roasted tea rest 1-2 months."},
+        {"ru": "Исинский чайник заводят под один сорт чая и не моют с мылом.", "en": "Dedicate a Yixing pot to one tea, no soap."}
+      ]
+    },
+    {
+      "id": "tea_puer_grog",
+      "kind": "tea",
+      "category": "author",
+      "icon": "🍯",
+      "name": {"ru": "Грог на шу пуэре", "en": "Puer grog"},
+      "subtitle": {"ru": "Авторский рецепт · безалкогольный", "en": "Signature - alcohol free"},
+      "desc": {"ru": "Согревающий зимний напиток: крепкий шу пуэр с апельсином, мёдом и специями. Варится в чайнике.", "en": "Warming winter brew: strong shou puer with orange, honey and spices."},
+      "base_servings": 1,
+      "servings_options": [1, 2, 3],
+      "params": [
+        {"key": "tea", "label": {"ru": "Шу пуэр", "en": "Shou puer"}, "value": 7, "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Вода", "en": "Water"}, "value": 300, "unit": "ml", "scale": true},
+        {"key": "honey", "label": {"ru": "Мёд", "en": "Honey"}, "value": 15, "unit": "g", "scale": true},
+        {"key": "orange", "label": {"ru": "Апельсин", "en": "Orange"}, "text": {"ru": "2 дольки + цедра", "en": "2 slices + zest"}},
+        {"key": "spice", "label": {"ru": "Специи", "en": "Spices"}, "text": {"ru": "Корица, 2 гвоздики, бадьян", "en": "Cinnamon, 2 cloves, star anise"}},
+        {"key": "temp", "label": {"ru": "Температура", "en": "Temp"}, "text": {"ru": "100 °C, лёгкое кипение", "en": "100 °C, gentle simmer"}},
+        {"key": "time", "label": {"ru": "Время варки", "en": "Simmer time"}, "text": {"ru": "5–7 мин", "en": "5-7 min"}}
+      ],
+      "steps": [
+        {"n": 1, "title": {"ru": "Промыть чай", "en": "Rinse the tea"}, "text": {"ru": "Залейте {tea} пуэра кипятком на 5 секунд и слейте.", "en": "Rinse {tea} of puer for 5 s."}, "tip": {"ru": "Промывка обязательна: варка вытянет всю пыль из листа.", "en": "Rinsing matters more when simmering."}, "timer": 5},
+        {"n": 2, "title": {"ru": "Довести воду", "en": "Heat the water"}, "text": {"ru": "В сотейник налейте {water} воды, добавьте специи и доведите до кипения.", "en": "Bring {water} with the spices to a boil."}, "tip": {"ru": "Специи закладывайте в холодную воду — так они отдадут больше аромата.", "en": "Add spices to cold water."}, "timer": 180},
+        {"n": 3, "title": {"ru": "Варить чай", "en": "Simmer the tea"}, "text": {"ru": "Всыпьте промытый чай, убавьте огонь и варите 5–7 минут на слабом кипении.", "en": "Add the tea and simmer gently for 5-7 minutes."}, "tip": {"ru": "Не кипятите бурно — настой станет мутным и горьким.", "en": "Avoid a rolling boil."}, "timer": 360},
+        {"n": 4, "title": {"ru": "Добавить цитрус и мёд", "en": "Add citrus and honey"}, "text": {"ru": "Снимите с огня, добавьте дольки апельсина и {honey} мёда, размешайте.", "en": "Off the heat add orange and {honey} of honey."}, "tip": {"ru": "Мёд кладите при 50–60 °C: в кипятке он теряет пользу и аромат.", "en": "Add honey below 60 °C."}},
+        {"n": 5, "title": {"ru": "Процедить и подать", "en": "Strain and serve"}, "text": {"ru": "Процедите через ситечко в прогретые кружки, украсьте цедрой.", "en": "Strain into warm mugs, garnish with zest."}, "tip": {"ru": "Подавайте в толстостенной кружке — грог долго остаётся горячим.", "en": "Thick-walled mugs hold the heat."}}
+      ],
+      "tips": [
+        {"ru": "Пуэр отлично переносит варку — в отличие от зелёного и белого чая.", "en": "Puer handles simmering well."},
+        {"ru": "Варёный чай можно хранить в термосе до 4 часов без потери вкуса.", "en": "Keeps in a thermos for 4 hours."},
+        {"ru": "Для взрослой версии добавьте 20 мл тёмного рома в чашку.", "en": "Add 20 ml dark rum for an adult version."}
+      ]
+    },
+    {
+      "id": "tea_cold_brew_oolong",
+      "kind": "tea",
+      "category": "author",
+      "icon": "🧊",
+      "name": {"ru": "Холодное заваривание молочного улуна", "en": "Cold brew milk oolong"},
+      "subtitle": {"ru": "Авторский рецепт · 6–8 часов", "en": "Signature - 6-8 hours"},
+      "desc": {"ru": "Медленная холодная экстракция: сладкий, сливочный, абсолютно без горечи настой. Готовится в холодильнике.", "en": "Slow cold extraction: sweet, creamy, zero bitterness."},
+      "base_servings": 1,
+      "servings_options": [1, 2, 3],
+      "params": [
+        {"key": "tea", "label": {"ru": "Молочный улун", "en": "Milk oolong"}, "value": 8, "unit": "g", "scale": true},
+        {"key": "water", "label": {"ru": "Холодная вода", "en": "Cold water"}, "value": 500, "unit": "ml", "scale": true},
+        {"key": "temp", "label": {"ru": "Температура", "en": "Temp"}, "text": {"ru": "4–8 °C (холодильник)", "en": "4-8 °C (fridge)"}},
+        {"key": "ware", "label": {"ru": "Посуда", "en": "Vessel"}, "text": {"ru": "Стеклянный графин или бутылка", "en": "Glass carafe or bottle"}},
+        {"key": "time", "label": {"ru": "Время настаивания", "en": "Steep time"}, "text": {"ru": "6–8 часов", "en": "6-8 hours"}},
+        {"key": "count", "label": {"ru": "Повторные заливки", "en": "Refills"}, "text": {"ru": "1–2 раза", "en": "1-2 times"}}
+      ],
+      "steps": [
+        {"n": 1, "title": {"ru": "Ополоснуть лист", "en": "Rinse the leaf"}, "text": {"ru": "Засыпьте {tea} чая в графин и ополосните холодной водой, слейте.", "en": "Add {tea} to the carafe, rinse with cold water."}, "tip": {"ru": "Ополаскивание холодной водой убирает пыль, но не начинает экстракцию.", "en": "A cold rinse removes dust without extracting."}},
+        {"n": 2, "title": {"ru": "Залить водой", "en": "Fill with water"}, "text": {"ru": "Влейте {water} холодной фильтрованной воды и закройте крышкой.", "en": "Add {water} of cold filtered water and close."}, "tip": {"ru": "Пропорция ориентир: 1,5 г чая на 100 мл воды.", "en": "About 1.5 g per 100 ml."}, "weight_check": {"ru": "{tea}", "en": "{tea}"}},
+        {"n": 3, "title": {"ru": "Настоять в холодильнике", "en": "Steep in the fridge"}, "text": {"ru": "Уберите в холодильник на 6–8 часов (можно на ночь).", "en": "Refrigerate for 6-8 hours or overnight."}, "tip": {"ru": "При холодной экстракции не выделяются танины — настой не горчит даже через 12 часов.", "en": "Cold extraction avoids tannins entirely."}, "timer": 600},
+        {"n": 4, "title": {"ru": "Процедить", "en": "Strain"}, "text": {"ru": "Процедите настой, лист можно залить ещё раз — второй настой будет мягче.", "en": "Strain; the leaves are good for one more fill."}, "tip": {"ru": "Готовый настой хранится в холодильнике до 24 часов.", "en": "Keeps up to 24 hours."}},
+        {"n": 5, "title": {"ru": "Подать", "en": "Serve"}, "text": {"ru": "Подавайте со льдом, долькой лайма или веточкой мяты.", "en": "Serve over ice with lime or mint."}, "tip": {"ru": "Цитрус добавляйте прямо в стакан, а не в графин — иначе настой помутнеет.", "en": "Add citrus in the glass, not the carafe."}}
+      ],
+      "tips": [
+        {"ru": "Так же можно заваривать шэн пуэр, зелёный и белый чай — держите 8–12 часов.", "en": "Works for sheng, green and white tea too."},
+        {"ru": "Не используйте кипячёную остывшую воду: нужна свежая, с кислородом.", "en": "Use fresh, oxygenated water."},
+        {"ru": "Лист после холодного заваривания можно залить горячей водой — получится ещё 2–3 пролива.", "en": "Spent leaves still give 2-3 hot infusions."}
+      ]
+    }
+  ]
+}
